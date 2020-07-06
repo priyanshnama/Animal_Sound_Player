@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Animal Sound Player</string>
+    <string name="last_played">Last Played</string>
+    <string name="meow">Meow</string>
+    <string name="bark">Bark</string>
+    <string name="pause_button_description">pauses the sound</string>
+    <string name="play_button_description">plays the sound</string>
+</resources>

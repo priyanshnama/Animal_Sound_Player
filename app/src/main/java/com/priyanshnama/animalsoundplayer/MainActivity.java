@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
 
         mediaPlayer = MediaPlayer.create(this, sharedPreferences.getInt("last_played",R.raw.bark));
-        last_Played.setText(sharedPreferences.getString("last_played","click on a animal name"));
+        last_Played.setText(sharedPreferences.getString("txt_last_played","click on a animal name"));
 
         bark.setOnClickListener(v -> changeSound(R.raw.bark, "bark"));
         meow.setOnClickListener(v -> changeSound(R.raw.meow, "meow"));
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this,sound);
         play_the_sound();
         editor.putInt("last_played",sound);
-        editor.putString("last_played",last_played);
+        editor.putString("txt_last_played",last_played);
         last_Played.setText(last_played);
         editor.commit();
         mediaPlayer.setOnCompletionListener(v ->pause_the_sound());
